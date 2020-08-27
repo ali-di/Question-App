@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <label for="score">Score :</label>
+          <span id="score" class="text-dark">0</span>
+          <h4 id="index" class="text-center mb-4 mt-0"></h4>
+          <h2 class="display-5 text-center" id="question"></h2>
+          <div class="mt-5">
+            <p class="lead anwser" id="awnsers1"><input type="radio" id="awnser1" name="answers" onclick="GetChecked(this)"></p>
+            <p class="lead anwser" id="awnsers2"><input type="radio" id="awnser2" name="answers" onclick="GetChecked(this)"></p>
+            <p class="lead anwser" id="awnsers3"><input type="radio" id="awnser3" name="answers" onclick="GetChecked(this)"></p>
+            <p class="lead anwser" id="awnsers4"><input type="radio" id="awnser4" name="answers" onclick="GetChecked(this)"></p>
+          </div>
+          <div class="d-flex justify-content-center mt-5">
+            <button class="btn btn-info mr-2" id="nextbtn">Next</button>
+            <button class="btn btn-info" id="submit" disabled onclick="submited()">submit</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bg-dark sumbited" id="submited">
+        <h1 class="text-white text-center score">Your Score : <span id="score-end"></span></h1>
+        <button class="btn btn-light btn-again" onclick="refresh()">Try Again</button>
+      </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
